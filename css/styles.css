@@ -223,6 +223,14 @@ main, .footer { position: relative; z-index: 1; }
 .card a { font-size: 0.8125rem; text-underline-offset: 3px; }
 .card a:hover { color: var(--accent); }
 
+/* Agencia */
+.agency-intro { display: grid; gap: 1.5rem; margin-bottom: 1.75rem; }
+.agency-intro .btn { margin-top: 1.25rem; }
+.agency-note { margin-top: 0.75rem; max-width: 56ch; }
+.agency-demo { margin: 0; padding: 1rem; }
+.nfc-plate { display: block; width: 100%; aspect-ratio: 48 / 20; touch-action: pan-y; cursor: pointer; }
+.agency-demo figcaption { margin-top: 0.75rem; border-top: 1px dashed var(--line); padding-top: 0.625rem; }
+
 /* Setup */
 .setup-grid { display: grid; gap: 0.875rem; }
 .setup-card { background: var(--surface); border: 1px solid var(--line); transition: border-color var(--ease), box-shadow var(--ease); }
@@ -365,6 +373,8 @@ main, .footer { position: relative; z-index: 1; }
 @media (min-width: 960px) {
   .about { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 3rem; }
   .core-intro { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
+  .agency-intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 3rem; align-items: center; }
+  .cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .contact { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 3rem; }
 }
 @media (max-width: 719px) {

@@ -36,6 +36,7 @@
   <link rel="modulepreload" href="js/setup.js">
   <link rel="modulepreload" href="js/blog.js">
   <link rel="modulepreload" href="js/dotmatrix.js">
+  <link rel="modulepreload" href="js/nfcplate.js">
   <link rel="modulepreload" href="js/orb.js">
   <link rel="modulepreload" href="js/recs.js">
   <link rel="modulepreload" href="js/flowers.js">
@@ -57,6 +58,7 @@
         <ul class="nav">
           <li><a href="#sobre-mi" data-i18n="nav_about">sobre mí</a></li>
           <li><a href="#cleargrade" data-i18n="nav_core">cleargrade</a></li>
+          <li><a href="#agencia" data-i18n="nav_agency">agencia</a></li>
           <li><a href="#setup" data-i18n="nav_setup">setup</a></li>
           <li><a href="#stack" data-i18n="nav_stack">stack</a></li>
           <li><a href="#recomiendo" data-i18n="nav_recs">recomiendo</a></li>
@@ -128,29 +130,62 @@
       </div>
     </section>
 
+    <section class="section wrap" id="agencia" aria-labelledby="agency-h">
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">03</span><h2 id="agency-h" data-i18n="agency_title">Agencia</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <div class="agency-intro">
+        <div>
+          <p class="kicker"><span data-i18n="agency_kicker">negocios locales · tegucigalpa</span></p>
+          <p class="lead" data-i18n="agency_lead">Hago que los negocios de Tegucigalpa aparezcan primero en Google Maps.</p>
+          <p class="note agency-note" data-i18n="agency_note">Talleres, clínicas, ferreterías. Sin videos ni redes sociales: una web que carga rápido, la ficha de Google en orden y una placa en el mostrador para pedir reseñas.</p>
+          <a class="btn btn-primary" id="agencyLink" data-i18n="agency_cta">Ver la agencia</a>
+        </div>
+        <figure class="agency-demo panel">
+          <canvas class="nfc-plate" id="nfcPlate" role="img" aria-label="Animación: un teléfono se acerca a la placa del mostrador y se abre el formulario de reseña."></canvas>
+          <figcaption class="note" data-i18n="agency_caption">La placa abre el formulario de reseña del negocio. El cliente elige las estrellas.</figcaption>
+        </figure>
+      </div>
+      <ul class="cards cards-3 agency-cards">
+        <li class="card">
+          <h4 data-i18n="agency_c1_title">Web &lt; 1 s</h4>
+          <span class="card-status" data-i18n="agency_c1_tag">estática · 4G</span>
+          <p data-i18n="agency_c1_body">Una página que abre al instante en el celular, con botones de WhatsApp, Llamar y Cómo llegar.</p>
+        </li>
+        <li class="card">
+          <h4 data-i18n="agency_c2_title">Google Maps</h4>
+          <span class="card-status" data-i18n="agency_c2_tag">ficha optimizada</span>
+          <p data-i18n="agency_c2_body">Categorías, horarios, fotos y servicios al día, y respuesta a cada reseña.</p>
+        </li>
+        <li class="card">
+          <h4 data-i18n="agency_c3_title">Placa NFC de reseñas</h4>
+          <span class="card-status" data-i18n="agency_c3_tag">nfc + qr</span>
+          <p data-i18n="agency_c3_body">El cliente acerca el teléfono o escanea, y llega directo a dejar su reseña en Google.</p>
+        </li>
+      </ul>
+    </section>
+
     <div class="flower-sep" data-flower="arduino" data-side="right" aria-hidden="true"></div>
 
     <section class="section wrap" id="setup" aria-labelledby="setup-h">
-      <div class="sec-head"><span class="sec-num" aria-hidden="true">03</span><h2 id="setup-h" data-i18n="setup_title">Setup y hardware</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">04</span><h2 id="setup-h" data-i18n="setup_title">Setup y hardware</h2><span class="ascii-rule" aria-hidden="true"></span></div>
       <div class="setup-grid" id="setupGrid"></div>
     </section>
 
     <section class="section wrap" id="stack" aria-labelledby="stack-h">
-      <div class="sec-head"><span class="sec-num" aria-hidden="true">04</span><h2 id="stack-h" data-i18n="stack_title">Stack y herramientas</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">05</span><h2 id="stack-h" data-i18n="stack_title">Stack y herramientas</h2><span class="ascii-rule" aria-hidden="true"></span></div>
       <ul class="chips" id="stackChips"></ul>
     </section>
 
     <div class="flower-sep" data-flower="anemone" data-side="left" aria-hidden="true"></div>
 
     <section class="section wrap" id="recomiendo" aria-labelledby="recs-h">
-      <div class="sec-head"><span class="sec-num" aria-hidden="true">05</span><h2 id="recs-h" data-i18n="recs_title">Recomiendo</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">06</span><h2 id="recs-h" data-i18n="recs_title">Recomiendo</h2><span class="ascii-rule" aria-hidden="true"></span></div>
       <div class="recs" id="recs"></div>
     </section>
 
     <div class="flower-sep" data-flower="gun" data-side="right" aria-hidden="true"></div>
 
     <section class="section wrap" id="blog" aria-labelledby="blog-h">
-      <div class="sec-head"><span class="sec-num" aria-hidden="true">06</span><h2 id="blog-h" data-i18n="blog_title">Blog y devlog</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">07</span><h2 id="blog-h" data-i18n="blog_title">Blog y devlog</h2><span class="ascii-rule" aria-hidden="true"></span></div>
       <div class="terminal">
         <div class="terminal-bar" aria-hidden="true"><span>~/devlog</span><span>tail -f bitacora.log</span></div>
         <div id="posts"></div>
@@ -160,7 +195,7 @@
     <div class="flower-sep" data-flower="cube" data-side="left" aria-hidden="true"></div>
 
     <section class="section wrap" id="contacto" aria-labelledby="contact-h">
-      <div class="sec-head"><span class="sec-num" aria-hidden="true">07</span><h2 id="contact-h" data-i18n="contact_title">Contacto</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">08</span><h2 id="contact-h" data-i18n="contact_title">Contacto</h2><span class="ascii-rule" aria-hidden="true"></span></div>
       <div class="contact">
         <div>
           <p class="lead" data-i18n="contact_lead">Para proyectos, preguntas o hablar de hardware.</p>

@@ -8,6 +8,20 @@
 //   { link: 'https://…', label: 'Texto' }
 export const posts = [
   {
+    slug: 'agencia-local',
+    date: '2026-11-12',
+    tag: 'agencia',
+    featured: false,
+    title: 'Por qué apuesto por Google Maps y no por redes sociales',
+    body: [
+      'Cuando a alguien en Tegucigalpa se le arruina el carro o le duele una muela, no abre TikTok. Saca el celular, busca en Google Maps y llama al primero que se ve confiable: el que tiene reseñas, horario claro y una web que abre. Esa decisión se toma en menos de un minuto, y muchos negocios buenos la pierden sin saberlo.',
+      'Por eso estoy armando una agencia pequeña para negocios locales: talleres, clínicas, ferreterías. Nada de videos ni de perseguir seguidores. Les hago una web que carga al instante, les dejo la ficha de Google completa y les pongo en el mostrador una placa con NFC y QR para que sus clientes les dejen reseña con un toque.',
+      { quote: 'Vender lo que el cliente ya está buscando, no pelear por su atención.' },
+      'Hay reglas que no pienso romper: la placa le pide reseña a todos por igual, no filtra a los que están contentos y no regala nada a cambio. Google castiga eso, y además no es honesto. El trato es simple: auditoría gratis y 30 días de demo; si el negocio no ve más llamadas o reseñas, no paga.',
+      'Todavía está en lanzamiento. Cuando tenga los primeros clientes, cuento aquí qué funcionó y qué no.',
+    ],
+  },
+  {
     slug: 'redacted-file',
     date: '2026-10-30',
     tag: 'juego',

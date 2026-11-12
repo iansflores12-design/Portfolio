@@ -11,6 +11,7 @@ import { initMacSaver } from './macsaver.js';
 import { initGlass } from './glass.js';
 import { initDecode } from './decode.js';
 import { initDotMatrix } from './dotmatrix.js';
+import { initNfcPlate } from './nfcplate.js';
 import { initOrb } from './orb.js';
 
 const $ = (selector) => document.querySelector(selector);
@@ -41,6 +42,15 @@ function renderCore() {
     el('p', {}, loc(project.description)),
     ...project.links.map((link) => el('a', { href: link.href }, loc(link.label))),
   )));
+}
+
+function renderAgency() {
+  const link = $('#agencyLink');
+  if (isPlaceholder(LINKS.agencia)) {
+    link.replaceWith(linkTo(LINKS.agencia, link.textContent, { className: 'btn' }));
+  } else {
+    Object.assign(link, { href: LINKS.agencia, target: '_blank', rel: 'noopener' });
+  }
 }
 
 function renderSetup() {
@@ -211,6 +221,7 @@ function initNavSpy() {
 
 applyI18n();
 renderCore();
+renderAgency();
 renderSetup();
 renderRecs();
 renderBlog();
@@ -219,6 +230,7 @@ initForm();
 initThemeToggle();
 initNavSpy();
 initDotMatrix($('#dotmatrix'));
+initNfcPlate($('#nfcPlate'));
 initOrb($('#orb'));
 initFlowers($('#flowers'));
 initPortals($('[data-flower="gun"]'));

@@ -1,6 +1,14 @@
 // Los otros proyectos. Para agregar uno, suma un objeto a `projects`.
 // Cualquier texto puede ser "texto" o { es: 'texto', en: 'text' }.
+import { AGENCY_NAME } from './config.js';
+
 export const projects = [
+  {
+    name: AGENCY_NAME,
+    status: 'En lanzamiento',
+    description: 'Agencia para negocios locales de Tegucigalpa: web ultrarrápida, Google Maps en orden y placa NFC de reseñas.',
+    links: [{ label: 'Ver la sección', href: '#agencia' }, { label: 'Por qué Google Maps', href: '#post-agencia-local' }],
+  },
   {
     name: 'Tree',
     status: 'En planificación',

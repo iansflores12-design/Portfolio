@@ -120,7 +120,6 @@ const PLANS = [
 ];
 
 const EXTRAS = [
-  ['Placa NFC de reseñas', 'L 1,200'],
   ['Fotos de producto', 'L 80 c/u'],
   ['Correo con su dominio', 'incluido'],
   ['Dominio .com', '~L 350 / año'],

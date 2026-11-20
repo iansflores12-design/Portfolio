@@ -46,6 +46,7 @@ function renderCore() {
 
 function renderAgency() {
   const link = $('#agencyLink');
+  if (!link) return; // sin landing de la agencia todavía: no se muestra el botón
   if (isPlaceholder(LINKS.agencia)) {
     link.replaceWith(linkTo(LINKS.agencia, link.textContent, { className: 'btn' }));
   } else {

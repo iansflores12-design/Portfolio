@@ -225,6 +225,22 @@ function initCompare() {
   show(SECTIONS[0]);
 }
 
+/* ---------------- sello ---------------- */
+
+// Huella de lo que se ofrece: si cambia un precio o una condición, cambia la huella.
+async function sealProposal() {
+  const out = $('#sealHash');
+  try {
+    const terms = JSON.stringify({ ref: 'PCBH-2026-01', valid: '2026-12-20', PLANS, EXTRAS, TRUST });
+    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(terms));
+    const hex = [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
+    out.textContent = hex.slice(0, 16).match(/.{4}/g).join(' ');
+    out.title = hex;
+  } catch {
+    out.textContent = 'PCBH-2026-01';
+  }
+}
+
 /* ---------------- lo mismo que el portfolio ---------------- */
 
 function initThemeToggle() {
@@ -250,6 +266,7 @@ renderImprovements();
 renderTrust();
 renderPlans();
 initCompare();
+sealProposal();
 if (!isPlaceholder(LINKS.email)) $('#mailLink').href = `mailto:${LINKS.email}?subject=${encodeURIComponent('Propuesta sitio PC Builds')}`;
 initThemeToggle();
 initOrb($('#orb'));

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PC Builds Honduras — Propuesta · Ian F</title>
+  <meta name="description" content="Propuesta de Ian F para PC Builds Honduras: sitio nuevo, tienda, panel de inventario, antes y después y precios.">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var light = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches;
+      document.documentElement.dataset.theme = saved || (light ? 'light' : 'dark');
+    })();
+  </script>
+  <script type="module" src="/js/pcbh.js"></script>
+</head>
+<body>
+  <canvas class="flowers" id="flowers" aria-hidden="true"></canvas>
+  <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="/">IAN F<span class="accent">/</span></a>
+      <nav aria-label="Principal">
+        <ul class="nav">
+          <li><a href="/#sobre-mi" data-i18n="nav_about">sobre mí</a></li>
+          <li><a href="/#cleargrade" data-i18n="nav_core">cleargrade</a></li>
+          <li><a href="/#agencia" class="active" aria-current="true" data-i18n="nav_agency">agencia</a></li>
+          <li><a href="/#setup" data-i18n="nav_setup">setup</a></li>
+          <li><a href="/#stack" data-i18n="nav_stack">stack</a></li>
+          <li><a href="/#recomiendo" data-i18n="nav_recs">recomiendo</a></li>
+          <li><a href="/#blog" data-i18n="nav_blog">blog</a></li>
+          <li><a href="/#contacto" data-i18n="nav_contact">contacto</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar entre modo claro y oscuro">
+        <span class="theme-glyph" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap pcbh-hero" id="top">
+      <p class="pcbh-path"><a href="/#agencia">~/agencia</a><span aria-hidden="true">/</span>propuestas<span aria-hidden="true">/</span><b>pcbh</b></p>
+      <div class="pcbh-title">
+        <img src="/assets/pcbh/pcb-cubes.svg" alt="" width="56" height="56">
+        <h1>PC Builds Honduras</h1>
+      </div>
+      <p class="hero-tag"><span class="prompt" aria-hidden="true">$</span> <span>Un sitio a la altura de lo que arman</span><span class="caret" aria-hidden="true"></span></p>
+      <p class="hero-sub">Hoy su web corre sobre una plantilla de Odoo. Esta propuesta la reemplaza por un sitio con identidad propia, una tienda más fácil de recorrer y un panel para publicar sin depender de nadie.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://pcbuilds-honduras.vercel.app" target="_blank" rel="noopener">Ver el sitio nuevo -&gt;</a>
+        <a class="btn" href="#antes-despues">Antes y después</a>
+        <a class="btn" href="https://pcbuilds-honduras.vercel.app/admin" target="_blank" rel="noopener">Abrir el panel</a>
+      </div>
+      <dl class="pcbh-meta">
+        <div><dt>cliente</dt><dd>PC Builds Honduras · Tegucigalpa y San Pedro Sula</dd></div>
+        <div><dt>preparada por</dt><dd>Ian F · noviembre 2026</dd></div>
+        <div><dt>estado</dt><dd>demo funcionando, lista para revisar</dd></div>
+      </dl>
+    </section>
+
+    <section class="section wrap" id="sistema" aria-labelledby="sys-h">
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">01</span><h2 id="sys-h">Sistema de diseño</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <p class="lead">Una identidad de ficha técnica: fondo blanco, líneas finas y el carmesí de su logo solo donde se actúa. Tipografía Saira, pensada para hardware.</p>
+      <a class="panel pcbh-board" href="/assets/pcbh/sistema-de-diseno.webp" target="_blank" rel="noopener">
+        <img src="/assets/pcbh/sistema-de-diseno.webp" alt="Sistema de diseño de PC Builds: colores, tipografías, botones, iconos y componentes" width="1600" height="900" loading="lazy" decoding="async">
+      </a>
+    </section>
+
+    <section class="section core" id="antes-despues" aria-labelledby="ba-h">
+      <div class="wrap">
+        <div class="sec-head"><span class="sec-num" aria-hidden="true">02</span><h2 id="ba-h">Antes y después</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+        <div class="post-filters pcbh-tabs" role="tablist" aria-label="Sección" id="baTabs"></div>
+        <div class="pcbh-ba">
+          <div class="terminal">
+            <div class="terminal-bar"><span id="baOld">pcbuildshonduras.com/</span><span>arrastra o pasa el mouse</span></div>
+            <div class="compare-frame">
+              <div class="compare" id="compare">
+                <div class="compare-inner">
+                  <img class="compare-after" id="baAfter" alt="" decoding="async">
+                  <div class="compare-before" id="baBeforeWrap"><img id="baBefore" alt="" decoding="async"></div>
+                  <div class="compare-handle" id="baHandle" role="slider" tabindex="0" aria-label="Comparar antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span aria-hidden="true">&lt;|&gt;</span></div>
+                </div>
+              </div>
+              <span class="compare-tag compare-tag-l" aria-hidden="true">antes</span>
+              <span class="compare-tag compare-tag-r" aria-hidden="true">después</span>
+            </div>
+          </div>
+          <aside class="panel pcbh-changes">
+            <h3 id="baTitle">Inicio</h3>
+            <ul class="post-list" id="baList"></ul>
+            <a class="btn" id="baLive" target="_blank" rel="noopener">Verla en vivo -&gt;</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="mejoras" aria-labelledby="imp-h">
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">03</span><h2 id="imp-h">Qué mejora</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <ul class="cards cards-3" id="improvements"></ul>
+      <p class="panel pcbh-finding"><b>Hallazgo del catálogo.</b> Todas sus placas madre son DDR5 y toda su RAM es DDR4, y no hay placas para AM4 ni LGA1200. El configurador lo detecta y ofrece pedir la pieza, así no se pierde la venta.</p>
+    </section>
+
+    <div class="flower-sep" data-flower="cube" data-side="right" aria-hidden="true"></div>
+
+    <section class="section wrap" id="confianza" aria-labelledby="trust-h">
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">04</span><h2 id="trust-h">Cómo trabajo</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <p class="lead">Sin sorpresas y todo a su nombre.</p>
+      <dl class="panel kv pcbh-trust" id="trust"></dl>
+      <div class="actions">
+        <a class="btn" href="https://pcbuilds-honduras.vercel.app/descargas/pcbuilds-web-codigo.zip" download>Descargar el código fuente (.zip)</a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="inversion" aria-labelledby="price-h">
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">05</span><h2 id="price-h">Inversión</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <p class="lead">Precios claros, en lempiras.</p>
+      <ul class="cards cards-3 pcbh-plans" id="plans"></ul>
+      <h3 class="sub-h">Extras</h3>
+      <ul class="stats pcbh-extras" id="extras"></ul>
+      <h3 class="sub-h">Hosting</h3>
+      <p class="prose note pcbh-hosting">El sitio va en Cloudflare Pages y los productos, fotos y pedidos en Supabase, los dos en cuentas a nombre de PC Builds y en su plan gratuito. No pagan mensualidad de hosting; solo renuevan el dominio una vez al año. Un reloj automático mantiene la base de datos activa para que nunca se pause. Las comisiones de PixelPay, BAC o Tigo Money las cobra cada proveedor directamente.</p>
+    </section>
+
+    <section class="section wrap" id="siguiente" aria-labelledby="next-h">
+      <div class="sec-head"><span class="sec-num" aria-hidden="true">06</span><h2 id="next-h">Siguiente paso</h2><span class="ascii-rule" aria-hidden="true"></span></div>
+      <div class="contact">
+        <div>
+          <p class="lead">Les llevo la demo al local, sin compromiso.</p>
+          <p class="note pcbh-next-note">La ven en su computadora y en su celular. Si les gusta, empezamos con el 50 %.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" id="mailLink" href="mailto:ian.sflores12@gmail.com?subject=Propuesta%20sitio%20PC%20Builds">Escribirle a Ian -&gt;</a>
+          <a class="btn" href="https://pcbuilds-honduras.vercel.app" target="_blank" rel="noopener">Probar la demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <canvas class="glass glass-foot" data-scene="wave" aria-hidden="true"></canvas>
+    <pre aria-hidden="true">+--[ eof ]--------------------------------+</pre>
+    <p>© <span id="year"></span> Ian F · <span data-i18n="footer_note">hecho a mano · sin frameworks</span> · <a href="/">volver al portfolio</a></p>
+  </footer>
+
+  <div class="orb" id="orb"></div>
+</body>
+</html>

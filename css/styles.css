@@ -410,3 +410,84 @@ main, .footer { position: relative; z-index: 1; }
 .portal-mode :is(h1, h2, h3, h4, p, li, a, button, img, figure, dt, dd, pre, label, article, summary, .rec) { touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; }
 .portal-moved { position: relative; z-index: 50; }
 .portal-held { z-index: 55; cursor: grabbing !important; filter: drop-shadow(0 0 10px #3aa0ff88); }
+
+/* Propuesta PC Builds Honduras (/propuesta/PCBH/) */
+.pcbh-path { color: var(--muted); font-size: 0.8125rem; margin-bottom: 1.5rem; }
+.pcbh-path a { color: var(--accent); text-decoration: none; }
+.pcbh-path a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.pcbh-path span { margin-inline: 0.25rem; color: var(--line-strong); }
+.pcbh-path b { color: var(--fg); }
+.pcbh-title { display: flex; align-items: center; gap: 1rem; }
+.pcbh-title img { width: clamp(2.5rem, 6vw, 3.5rem); height: auto; }
+.pcbh-title h1 { font: 700 clamp(1.75rem, 5.2vw, 3rem)/1.1 var(--display); letter-spacing: -0.02em; }
+.pcbh-meta { display: grid; gap: 0.375rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px dashed var(--line); font-size: 0.8125rem; }
+.pcbh-meta div { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 0.75rem; }
+.pcbh-meta dt { color: var(--accent); }
+.pcbh-meta dd { color: var(--muted); }
+
+.pcbh-board { display: block; margin-top: 1.25rem; padding: 0.5rem; transition: border-color var(--ease), box-shadow var(--ease); }
+.pcbh-board:hover { border-color: var(--accent); box-shadow: 0 0 16px -6px var(--accent); }
+.pcbh-board img { width: 100%; height: auto; }
+
+.pcbh-tabs { padding: 0 0 1rem; border: 0; }
+.pcbh-ba { display: grid; gap: 1rem; }
+.compare-frame { position: relative; }
+.compare {
+  height: clamp(22rem, 62vh, 40rem); overflow-y: auto; overflow-x: hidden;
+  background: #fff; cursor: ew-resize; touch-action: pan-y; user-select: none; -webkit-user-select: none;
+  scrollbar-width: thin;
+}
+.compare-inner { position: relative; }
+.compare img { display: block; width: 100%; height: auto; pointer-events: none; -webkit-user-drag: none; }
+.compare.is-phone img { width: min(100%, 390px); margin-inline: auto; }
+.compare-before { position: absolute; inset: 0; background: #fff; }
+.compare.is-phone .compare-before { background: transparent; }
+.compare-tag {
+  position: absolute; top: 0.75rem; z-index: 5; padding: 0.125rem 0.5rem; pointer-events: none;
+  background: #000; color: #fff; font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.compare-tag-l { left: 0.75rem; }
+.compare-tag-r { right: 1.25rem; }
+.compare-handle { position: absolute; top: 0; bottom: 0; z-index: 4; width: 0; border-left: 2px solid #000; outline: none; }
+.compare-handle span {
+  position: sticky; top: calc(clamp(22rem, 62vh, 40rem) / 2 - 1rem); display: grid; place-items: center; width: 3rem; height: 2rem; margin-left: -1.55rem;
+  background: #000; color: #fff; font-size: 0.75rem; font-weight: 700; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.compare:hover .compare-handle span, .compare-handle:focus-visible span { transform: scale(1.12); }
+.compare-handle:focus-visible span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pcbh-changes { display: grid; gap: 0.875rem; align-content: start; }
+.pcbh-changes h3 { font: 700 1.125rem var(--display); }
+.pcbh-changes h3::before { content: '> '; color: var(--accent); }
+.pcbh-changes .post-list { color: var(--muted); font-size: 0.875rem; gap: 0.5rem; }
+.pcbh-changes .btn { justify-self: start; }
+
+.pcbh-checks { display: grid; gap: 0.375rem; color: var(--muted); font-size: 0.8125rem; flex: 1; }
+.pcbh-checks li { display: grid; grid-template-columns: 1.5rem minmax(0, 1fr); }
+.pcbh-checks li::before { content: '[x]'; color: var(--accent); font-weight: 700; font-size: 0.75rem; }
+.pcbh-finding { margin-top: 0.875rem; font-size: 0.875rem; color: var(--muted); }
+.pcbh-finding b { color: var(--fg); }
+
+.pcbh-trust { margin-top: 1.25rem; }
+.pcbh-trust dd { color: var(--muted); font-size: 0.875rem; }
+
+.pcbh-plans { margin-top: 1.25rem; }
+.pcbh-price { font: 700 clamp(1.75rem, 3.6vw, 2.25rem)/1.1 var(--display); margin-block: 0.25rem 0.5rem; padding-bottom: 0.75rem; border-bottom: 1px dashed var(--line); }
+.pcbh-featured { border-color: var(--fg); box-shadow: inset 0 3px 0 var(--fg); }
+.pcbh-featured .card-status::after { content: ' ★'; }
+.pcbh-extras { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pcbh-hosting { max-width: 75ch; font-size: 0.875rem; }
+.pcbh-next-note { margin-top: 0.5rem; }
+
+@media (min-width: 720px) { .pcbh-extras { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .pcbh-ba { grid-template-columns: minmax(0, 1fr) 19rem; align-items: start; } }
+.agency-case {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 1rem; margin-top: 0.875rem;
+  text-decoration: none; transition: border-color var(--ease), box-shadow var(--ease);
+}
+.agency-case:hover { border-color: var(--accent); box-shadow: 0 0 16px -6px var(--accent); }
+.agency-case > span:nth-child(2) { display: grid; gap: 0.125rem; }
+.agency-case small { color: var(--accent); font-size: 0.75rem; }
+.agency-case b { font: 700 1rem var(--display); }
+.agency-case-go { color: var(--accent); font-weight: 700; transition: transform var(--ease); }
+.agency-case:hover .agency-case-go { transform: translateX(4px); }
+@media (max-width: 719px) { .pcbh-meta div { grid-template-columns: 6.5rem minmax(0, 1fr); } }

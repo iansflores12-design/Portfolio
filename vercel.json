@@ -1,6 +1,19 @@
 {
   "redirects": [
-    { "source": "/propuesta/PCBH", "destination": "https://pcbh.ianf.tech/propuesta/PCBH", "permanent": false },
-    { "source": "/propuesta/PCBH/:path*", "destination": "https://pcbh.ianf.tech/propuesta/PCBH", "permanent": false }
+    {
+      "source": "/propuesta/PCBH",
+      "destination": "https://pcbh.ianf.tech/propuesta/PCBH",
+      "permanent": false
+    },
+    {
+      "source": "/propuesta/PCBH/",
+      "destination": "https://pcbh.ianf.tech/propuesta/PCBH",
+      "permanent": false
+    },
+    {
+      "source": "/propuesta/PCBH/:path*",
+      "destination": "https://pcbh.ianf.tech/propuesta/PCBH",
+      "permanent": false
+    }
   ]
 }

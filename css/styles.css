@@ -489,3 +489,12 @@ main, .footer { position: relative; z-index: 1; }
 .pcbh-seal code { font: 700 0.8125rem var(--mono); letter-spacing: 0.04em; overflow-wrap: anywhere; }
 .pcbh-seal .note { border-top: 1px dashed var(--line); padding-top: 0.625rem; }
 .pcbh-next-note + .actions { margin-top: 1.25rem; }
+
+.pcbh-plans { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 720px) { .pcbh-plans { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); } }
+.pcbh-phases-note { margin-bottom: 0.75rem; }
+.pcbh-phases { margin: 0; padding: 0; list-style: none; border-top: 1px dashed var(--line); }
+.pcbh-phases li { display: grid; gap: 0.25rem 1.5rem; padding: 0.875rem 0; border-bottom: 1px dashed var(--line); font-size: 0.875rem; }
+.pcbh-phases b { color: var(--accent); font-weight: 700; }
+.pcbh-phases span { color: var(--muted); }
+@media (min-width: 720px) { .pcbh-phases li { grid-template-columns: 10rem minmax(0, 1fr) 16rem; } .pcbh-phases strong { text-align: right; } }

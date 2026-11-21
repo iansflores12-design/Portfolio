@@ -98,25 +98,26 @@ const TRUST = [
 ];
 
 const PLANS = [
-  { name: 'Sitio y tienda', price: 'L 15,000', note: 'pago único', items: [
-    'Portada, tienda por categorías, Corporativo, Trabajos y Contáctenos',
-    'Migración del catálogo actual con fotos y precios',
-    'Publicado en su dominio, sin mensualidad de hosting',
-    '1 mes de soporte',
-  ] },
-  { name: 'Completo', price: 'L 24,000', note: 'pago único · recomendado', featured: true, items: [
-    'Todo lo de Sitio y tienda',
+  { name: 'Sitio completo + integración con Odoo', price: 'L 3,000', note: 'pago único · L 1,500 al empezar y L 1,500 al publicar', featured: true, items: [
+    'Todo el sitio nuevo: portada, tienda, página de cada producto, Corporativo, Trabajos y Contáctenos',
     'Panel para publicar productos, fotos, precios, stock y portada',
     'Arma tu PC, carrito, pedidos y su proveedor de pago',
-    'Search Console y ficha de Google Maps',
-    'Capacitación y 3 meses de soporte',
+    'Integración con Odoo: importa precios, stock y productos nuevos desde lo que exportan de Odoo',
+    'Publicado en su dominio, sin mensualidad de hosting',
+    'Capacitación y 1 mes de soporte',
   ] },
-  { name: 'Mantenimiento', price: 'L 1,500', note: 'al mes · opcional', items: [
-    'SEO al día: velocidad y errores revisados cada mes',
-    'Respaldos del catálogo y los pedidos',
+  { name: 'Mantenimiento', price: 'L 500', note: 'al mes · opcional', items: [
     'Cambios de contenido y productos que pidan',
-    'Respuesta a reseñas y reporte mensual',
+    'Respaldos del catálogo y los pedidos',
+    'Velocidad, errores y Google revisados cada mes',
   ] },
+];
+
+// Después, sin apuro: siempre pagan menos que hoy.
+const PHASES = [
+  ['1 · ahora', 'Sitio y tienda nuevos. Odoo sigue para todo lo demás.', 'L 3,000 una vez'],
+  ['2 · cuando confíen', 'Inventario, pedidos, compras y caja pasan al panel, junto a Odoo unas semanas.', 'sin instalación con 12 meses de mantenimiento'],
+  ['3 · apagar Odoo', 'Dejan de pagar Odoo. Su contador recibe las ventas como siempre.', 'máximo la mitad de lo que pagan hoy a Odoo'],
 ];
 
 const EXTRAS = [
@@ -149,6 +150,7 @@ function renderPlans() {
     );
     return card;
   }));
+  $('#phases').append(...PHASES.map(([step, what, price]) => el('li', {}, el('b', {}, step), el('span', {}, what), el('strong', {}, price))));
   $('#extras').append(...EXTRAS.map(([name, price]) => el('li', {}, el('strong', {}, price), el('span', {}, name))));
 }
 
@@ -230,7 +232,7 @@ function initCompare() {
 async function sealProposal() {
   const out = $('#sealHash');
   try {
-    const terms = JSON.stringify({ ref: 'PCBH-2026-01', valid: '2026-12-20', PLANS, EXTRAS, TRUST });
+    const terms = JSON.stringify({ ref: 'PCBH-2026-01', valid: '2026-12-20', PLANS, PHASES, EXTRAS, TRUST });
     const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(terms));
     const hex = [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
     out.textContent = hex.slice(0, 16).match(/.{4}/g).join(' ');

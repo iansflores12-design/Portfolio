@@ -498,3 +498,5 @@ main, .footer { position: relative; z-index: 1; }
 .pcbh-phases b { color: var(--accent); font-weight: 700; }
 .pcbh-phases span { color: var(--muted); }
 @media (min-width: 720px) { .pcbh-phases li { grid-template-columns: 10rem minmax(0, 1fr) 16rem; } .pcbh-phases strong { text-align: right; } }
+.pcbh-short { padding-bottom: clamp(1.5rem, 4vw, 2.5rem); }
+.pcbh-short .actions { margin-top: 1.5rem; }

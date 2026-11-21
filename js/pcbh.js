@@ -262,13 +262,15 @@ function initThemeToggle() {
   sync();
 }
 
+// The same script serves the short page (comparison only) and /completa/ (the whole proposal).
+const has = (selector) => document.querySelector(selector) !== null;
 applyI18n();
-renderImprovements();
-renderTrust();
-renderPlans();
-initCompare();
-sealProposal();
-if (!isPlaceholder(LINKS.email)) $('#mailLink').href = `mailto:${LINKS.email}?subject=${encodeURIComponent('Propuesta sitio PC Builds')}`;
+if (has('#improvements')) renderImprovements();
+if (has('#trust')) renderTrust();
+if (has('#plans')) renderPlans();
+if (has('#compare')) initCompare();
+if (has('#sealHash')) sealProposal();
+if (has('#mailLink') && !isPlaceholder(LINKS.email)) $('#mailLink').href = `mailto:${LINKS.email}?subject=${encodeURIComponent('Propuesta sitio PC Builds')}`;
 initThemeToggle();
 initOrb($('#orb'));
 initFlowers($('#flowers'));

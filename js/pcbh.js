@@ -93,7 +93,7 @@ const TRUST = [
   ['Lo ven antes de pagar', 'Les muestro el sitio funcionando en su computadora y en su celular, en el local.'],
   ['Pago por etapas', '50 % al empezar y 50 % cuando el sitio esté publicado a su gusto. Con recibo y acuerdo por escrito.'],
   ['Sin acceso a sus cuentas', 'No pido contraseñas de Odoo, del banco ni de redes. Las llaves del proveedor de pago las ponen ustedes.'],
-  ['El código es suyo', 'Código fuente legible, sin instaladores ni ejecutables. Lo puede revisar cualquier programador.'],
+  ['El código es suyo', 'Al terminar de pagar reciben el código fuente completo, legible y sin ejecutables. Lo puede revisar cualquier programador.'],
   ['Todo a su nombre', 'Dominio, hosting y cuentas quedan a nombre de PC Builds. Si un día cambian de proveedor, se lo llevan.'],
 ];
 

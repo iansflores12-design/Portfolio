@@ -98,7 +98,7 @@ const TRUST = [
 ];
 
 const PLANS = [
-  { name: 'Sitio completo + integración con Odoo', price: 'L 12,000', note: 'pago único · L 6,000 al empezar y L 6,000 al publicar', featured: true, items: [
+  { name: 'Sitio completo + integración con Odoo', price: 'A convenir', note: 'pago único · ustedes deciden el monto · en dos partes', featured: true, items: [
     'Todo el sitio nuevo: portada, tienda, página de cada producto, Corporativo, Trabajos y Contáctenos',
     'Panel para publicar productos, fotos, precios, stock y portada',
     'Arma tu PC, carrito, pedidos y su proveedor de pago',
@@ -106,7 +106,7 @@ const PLANS = [
     'Publicado en su dominio, sin mensualidad de hosting',
     'Capacitación y 1 mes de soporte',
   ] },
-  { name: 'Mantenimiento', price: 'L 1,000', note: 'al mes · opcional', items: [
+  { name: 'Mantenimiento', price: 'A convenir', note: 'al mes · opcional', items: [
     'Cambios de contenido y productos que pidan',
     'Respaldos del catálogo y los pedidos',
     'Velocidad, errores y Google revisados cada mes',
@@ -115,7 +115,7 @@ const PLANS = [
 
 // Después, sin apuro: siempre pagan menos que hoy.
 const PHASES = [
-  ['1 · ahora', 'Sitio y tienda nuevos reemplazan la web de Odoo, con FicoPOS y transferencias igual que hoy.', 'L 12,000 una vez'],
+  ['1 · ahora', 'Sitio y tienda nuevos reemplazan la web de Odoo, con FicoPOS y transferencias igual que hoy.', 'Pago único, a convenir'],
   ['2 · cuando confíen', 'Inventario, pedidos, compras y caja pasan al panel, junto a Odoo unas semanas.', 'sin instalación con 12 meses de mantenimiento'],
   ['3 · apagar Odoo', 'Dejan de pagar Odoo. Su contador recibe las ventas como siempre.', 'máximo la mitad de lo que pagan hoy a Odoo'],
 ];

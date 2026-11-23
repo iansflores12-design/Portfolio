@@ -4,6 +4,12 @@ import { AGENCY_NAME } from './config.js';
 
 export const projects = [
   {
+    name: 'AgroResilience',
+    status: 'Nominación global · NASA Space Apps 2026',
+    description: 'Representé a Tegucigalpa en el NASA Space Apps Challenge 2026 con AgroResilience y quedó entre los nominados globales.',
+    links: [{ label: 'Abrir agroresilience.app', href: 'https://agroresilience.app' }],
+  },
+  {
     name: AGENCY_NAME,
     status: 'En lanzamiento',
     description: 'Agencia para negocios locales de Tegucigalpa: web ultrarrápida, Google Maps en orden y placa NFC de reseñas.',

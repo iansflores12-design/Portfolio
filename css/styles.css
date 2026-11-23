@@ -149,6 +149,17 @@ main, .footer { position: relative; z-index: 1; }
 }
 @keyframes blink { 50% { opacity: 0; } }
 .hero-sub { margin-top: 0.75rem; max-width: 60ch; color: var(--muted); }
+.hero-award {
+  display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.625rem;
+  margin-top: 1.25rem; padding: 0.5rem 0.75rem; max-width: 100%;
+  border: 1px solid var(--accent); font-size: 0.8125rem; line-height: 1.4;
+  text-decoration: none; color: inherit;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.hero-award-k { color: var(--accent); text-transform: uppercase; font-size: 0.6875rem; letter-spacing: 0.06em; }
+@media (hover: hover) and (pointer: fine) {
+  .hero-award:hover { box-shadow: 0 0 16px -6px var(--accent); }
+}
 .actions { display: flex; flex-wrap: wrap; gap: 0.625rem; margin-top: 1.75rem; }
 
 .btn {

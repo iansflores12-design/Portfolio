@@ -40,7 +40,7 @@ function renderCore() {
     el('h4', {}, loc(project.name)),
     el('span', { class: 'card-status' }, loc(project.status)),
     el('p', {}, loc(project.description)),
-    ...project.links.map((link) => el('a', { href: link.href }, loc(link.label))),
+    ...project.links.map((link) => el('a', link.href.startsWith('http') ? { href: link.href, target: '_blank', rel: 'noopener' } : { href: link.href }, loc(link.label))),
   )));
 }
 

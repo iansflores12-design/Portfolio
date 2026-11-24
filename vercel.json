@@ -19,6 +19,12 @@
       "source": "/propuesta/PCBH/:path*/",
       "destination": "https://pcbh.ianf.tech/propuesta/PCBH",
       "permanent": false
-    }
+    },
+    { "source": "/propuesta/GC", "destination": "https://gc.ianf.tech/propuesta/", "permanent": false },
+    { "source": "/propuesta/GC/:path*", "destination": "https://gc.ianf.tech/propuesta/", "permanent": false },
+    { "source": "/propuesta/LE", "destination": "https://le.ianf.tech/propuesta/", "permanent": false },
+    { "source": "/propuesta/LE/:path*", "destination": "https://le.ianf.tech/propuesta/", "permanent": false },
+    { "source": "/propuesta/COD", "destination": "https://cod.ianf.tech/propuesta/", "permanent": false },
+    { "source": "/propuesta/COD/:path*", "destination": "https://cod.ianf.tech/propuesta/", "permanent": false }
   ]
 }

@@ -25,6 +25,7 @@ Después abre http://localhost:4173.
 | Entradas del blog (la nueva va arriba) | `js/blog.js` |
 | Colores del sitio | `:root` y `[data-theme]` en `css/styles.css` |
 | Dominio de Open Graph | `og:url` y `og:image` en `index.html` |
+| Project ID de Microsoft Clarity | `[EDITAR]-CLARITY-ID` en `index.html` |
 
 Un enlace con `[EDITAR]` sale marcado y no navega hasta que lo cambies.
 
@@ -47,6 +48,11 @@ El blog también acepta subtítulos, citas, listas, código, imágenes, modelos 
 
 Llena `en` en `js/i18n.js` con las mismas claves, incluidos los `data-i18n` de `index.html`; lo que falte queda en español. En los archivos de datos, cualquier texto puede ser `{ es: '…', en: '…' }`. Falta añadir un botón que llame a `setLang('en')`.
 
+
+## Analítica
+
+- **Vercel Web Analytics y Speed Insights:** ya están en `index.html`. Actívalos en el panel de Vercel (proyecto → Analytics y Speed Insights) y empiezan a recibir datos tras el siguiente despliegue. Solo funcionan en Vercel; en local el script da 404.
+- **Microsoft Clarity:** crea un proyecto en https://clarity.microsoft.com, copia el Project ID (Settings → Overview) y reemplaza `[EDITAR]-CLARITY-ID` en `index.html`. Mientras diga `[EDITAR]` no se carga.
 
 ## Modelos 3D y vidrio
 
